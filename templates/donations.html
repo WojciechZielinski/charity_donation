@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% for donation in donations %}
+        <h1>{{ forloop.counter }}) {{ donation.quantity }}
+            worki dla {{ donation.institution}};
+            Data odebrania: {{ donation.pick_up_date }} {{ donation.pick_up_time }}</h1>
+    {% endfor %}
+{% endblock %}
